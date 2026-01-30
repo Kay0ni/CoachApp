@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NanMoiJeSuisCoach.MainPage">
+
+    <VerticalStackLayout VerticalOptions="Center" Spacing="25" Margin="10">
+        <Entry
+            TextColor="DarkOrange"
+            FontSize="22"
+            x:Name="entPoids"
+            Placeholder="Poigd"
+            PlaceholderColor="#7d7c7c"
+            ClearButtonVisibility="WhileEditing"
+            Keyboard="Numeric"
+            VerticalOptions="Center"
+        ></Entry>
+        <Entry
+            TextColor="DarkOrange"
+            FontSize="22"
+            x:Name="entCM"
+            Placeholder="Taille"
+            PlaceholderColor="#7d7c7c"
+            ClearButtonVisibility="WhileEditing"
+            Keyboard="Numeric"
+            VerticalOptions="Center"
+        ></Entry>
+        <Entry
+            TextColor="DarkOrange"
+            FontSize="22"
+            x:Name="entAge"
+            Placeholder="Age"
+            PlaceholderColor="#7d7c7c"
+            ClearButtonVisibility="WhileEditing"
+            Keyboard="Numeric"
+            VerticalOptions="Center"
+        ></Entry>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <RadioButton
+                TextColor="DarkOrange"
+                x:Name="radioHomme"
+                Content="Homme"
+            ></RadioButton>
+            <RadioButton
+                TextColor="DarkOrange"
+                x:Name="radioFemme"
+                Content="Femme"
+            ></RadioButton>
+        </HorizontalStackLayout>
+        <Button
+            Text="Calculer IMG"
+            TextColor="White"
+            BackgroundColor="DarkOrange"
+            FontSize="22"
+            Clicked="btCalculer_Clicked"
+        ></Button>
+        <Image
+            Source="resources/img/fat.png"
+            x:Name="reaction"
+            HorizontalOptions="Center"
+            WidthRequest="150"
+            HeightRequest="150"
+        ></Image>
+        <Label
+            TextColor="DarkOrange"
+            HorizontalOptions="Center"
+            x:Name="lblResult"
+            Text="Votre img :"
+        />
+    </VerticalStackLayout>
+</ContentPage>
