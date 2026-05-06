@@ -30,7 +30,7 @@ L'aventure de son développement s'est déroulée en trois étapes majeures, aug
 
 | **IMG : 13% (Trop maigre)** | **IMG : 17% (Parfait)** | **IMG : 76% (Absolute GRAGAS)** |
 | :---: | :---: | :---: |
-| ![Maigre](assets/image_9fcb76.jpg) | ![Parfait](assets/image_9fcb93.jpg) | ![Gragas](assets/image_9fcb7a.jpg) |
+| ![Maigre](AssetsReadme/image_9fcb76.jpg) | ![Parfait](AssetsReadme/image_9fcb93.jpg) | ![Gragas](AssetsReadme/image_9fcb7a.jpg) |
 | *Statut : Critique* | *Statut : Optimal* | *Statut : Boss Final* |
 
 ## 🛠️ ÉQUIPEMENT REQUIS
