@@ -30,9 +30,9 @@ L'aventure de son développement s'est déroulée en trois étapes majeures, aug
 
 | **IMG : 13% (Trop maigre)** | **IMG : 17% (Parfait)** | **IMG : 76% (Absolute GRAGAS)** |
 | :---: | :---: | :---: |
-| ![Maigre](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/assets/image_9fcb76.jpg) |
-![Parfait](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/assets/image_9fcb93.jpg) | 
-![Gragas](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/assets/image_9fcb7a.jpg) |
+| ![Maigre](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/AssetsReadme/image_9fcb76.jpg) |
+  ![Parfait](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/AssetsReadme/image_9fcb93.jpg) | 
+  ![Gragas](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/AssetsReadme/image_9fcb7a.jpg) |
 | *Statut : Critique* | *Statut : Optimal* | *Statut : Boss Final* |
 
 ## 🛠️ ÉQUIPEMENT REQUIS
