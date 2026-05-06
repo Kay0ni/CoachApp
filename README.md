@@ -30,13 +30,9 @@ L'aventure de son développement s'est déroulée en trois étapes majeures, aug
 
 | **IMG : 13% (Trop maigre)** | **IMG : 17% (Parfait)** | **IMG : 76% (Absolute GRAGAS)** |
 | :---: | :---: | :---: |
-| ![Maigre](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/NanMoiJeSuisCoach/AssetsReadme/image_9fcb76.jpg) | ![Parfait](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/NanMoiJeSuisCoach/AssetsReadme/image_9fcb93.jpg) | ![Gragas](https://raw.githubusercontent.com/Kay0ni/CoachApp/master/NanMoiJeSuisCoach/AssetsReadme/image_9fcb7a.jpg) |
+| ![Maigre](https://github.com/Kay0ni/CoachApp/tree/b971776f47fb5083c55083d6a0e1a99a330a9889/NanMoiJeSuisCoach/AssetsReadme/image_9fcb76.jpg) | ![Parfait](https://github.com/Kay0ni/CoachApp/tree/b971776f47fb5083c55083d6a0e1a99a330a9889/NanMoiJeSuisCoach/AssetsReadme/image_9fcb93.jpg) | ![Gragas](https://github.com/Kay0ni/CoachApp/tree/b971776f47fb5083c55083d6a0e1a99a330a9889/NanMoiJeSuisCoach/AssetsReadme/image_9fcb7a.jpg) |
 | *Statut : Critique* | *Statut : Optimal* | *Statut : Boss Final* |
 
 ## 🛠️ ÉQUIPEMENT REQUIS
 * **IDE :** Visual Studio 2022.
 * **Framework :** .NET 8.0.
-* **Compétence :** DÉTERMINATION.
-
----
-*Logiciel forgé par Tim Crebessegues. Ne perdez pas espoir !*
