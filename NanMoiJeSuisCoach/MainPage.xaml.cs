@@ -6,26 +6,68 @@ namespace NanMoiJeSuisCoach
 {
     public partial class MainPage : ContentPage
     {
-        private readonly string nomFichier = "saveprofil";
+        private Profil profil = null;
+        private readonly SQLiteDb database = null;
+
         public MainPage()
         {
             InitializeComponent();
+            database = new SQLiteDb();
+            SqliteSelect();
         }
 
-        public void getProfil()
+        private async void SqliteSelect()
         {
-            try
+            profil = await database.GetLastItemAsync();
+
+            if (profil != null)
             {
-                Profil profil = Serializer.deserialize(nomFichier);
+                if (profil.Sexe == "Homme")
+                {
+                    radioHomme.IsChecked = true;
+                } else
+                {
+                    radioFemme.IsChecked = true;
+                }
+                entPoids.Text = profil.Poids.ToString();
+                entCM.Text = profil.Taille.ToString();
+                entAge.Text = profil.Age.ToString();
 
             }
-            catch
-            {
-                DisplayAlert("Erreur", "Impossible de charger le profil", "Ok");
-            }
+
+            showProfil();
         }
 
-            public void btCalculer_Clicked(object sender, EventArgs e)
+        private async void SqliteInsert(Profil profil)
+        {
+            int id = await database.SaveItemAsync(profil);
+        }
+
+        public void showProfil()
+        {
+            if (profil != null)
+            {
+                string result = profil.GetResult();
+                double img = profil.IMG;
+                if (result == "Parfait")
+                {
+                    reaction.Source = "resources/img/normal.jpg";
+                }
+                else if (result == "Absolute GRAGAS")
+                {
+                    reaction.Source = "resources/img/fat.png";
+                }
+                else if (result == "Trop maigre")
+                {
+                    reaction.Source = "resources/img/skinny.png";
+                }
+                lblResult.Text = "IMG : " + Math.Round(img) + "%. " + result;
+            }
+            
+        }
+
+        
+        public void btCalculer_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -33,27 +75,18 @@ namespace NanMoiJeSuisCoach
                 double weight = double.Parse(entPoids.Text);
                 double height = double.Parse(entCM.Text);
                 int age = int.Parse(entAge.Text);
+                DateTimeOffset date = DateTimeOffset.Now;
 
-                Profil profil = new Profil(sex, weight, height, age);
+                profil = new Profil(null, sex, weight, height, age, date); 
 
-                string result = profil.GetResult();
-                double img = profil.IMG;
-                if (result == "Parfait") {
-                    reaction.Source = "resources/img/normal.jpg";
-                } else if (result == "Absolute GRAGAS")
-                {
-                    reaction.Source = "resources/img/fat.png";
-                } else if (result == "Trop maigre")
-                {
-                    reaction.Source = "resources/img/skinny.png";
-                }
-                lblResult.Text = "IMG : " + Math.Round(img) + "%. " + result;
+                SqliteInsert(profil);
+
+                showProfil();
             } catch
             {
                 DisplayAlert("Erreur", "Saisie incorrects", "Ok");
             }
         }
-
     }
 
 }

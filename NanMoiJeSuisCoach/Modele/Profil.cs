@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
+using SQLite;
 
 namespace NanMoiJeSuisCoach.Modele
 {
     [Serializable]
     internal class Profil
     {
+        private readonly Nullable<int> id;
+        private DateTimeOffset dateCreation;
         private string sexe;
         private double poids;
         private double taille;
@@ -17,14 +21,36 @@ namespace NanMoiJeSuisCoach.Modele
         private double img;
         private string msg;
 
-        public Profil(string sexe, double poids, double taille, int age)
+        public Profil(Nullable<int> id, string sexe, double poids, double taille, int age, DateTimeOffset dateCreation)
         {
+            this.id = id;
             this.sexe = sexe;
             this.poids = poids;
             this.taille = taille;
             this.age = age;
+            this.dateCreation = dateCreation;
             this.img = this.CalculerIMG();
             this.msg = this.GenererMessage();
+        }
+
+        public Profil()
+        {
+            this.sexe = "Homme";
+            this.poids = 0;
+            this.taille = 0;
+            this.age = 0;
+            this.dateCreation = new DateTimeOffset();
+            this.img = 0;
+            this.msg = "";
+        }
+
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        public DateTimeOffset DateCreation
+        {
+            get { return this.dateCreation; }
+            set { this.dateCreation = value; }
         }
 
         public double Poids
@@ -81,6 +107,7 @@ namespace NanMoiJeSuisCoach.Modele
             {
                 msg = "Absolute GRAGAS";
             }
+            
             return msg;
         }
 
